@@ -435,10 +435,26 @@ width: 60%;
     align-self: center;
   }
   
-
+.about-footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
 
 .about-footer-content img {
-  width: 20%;
+  width: 44%;
+}
+
+.about-copywrite {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 13px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #3b3e45;
 }
 
 
