@@ -29,31 +29,95 @@ a {
   align-items: center;
  justify-content: space-between;
   height: 63px;
-  border: 2px solid red;
   padding: 16px;
 }
 
-.hamburger {
+/* .hamburger {
   display: flex;
   flex-direction: column;
   gap: 2px;
-}
+} */
 
 .logo {
   margin-left: 50%;
 }
 
-.bar {
+/* .bar {
   width: 30px;
   height: 4px;
   background: black;
+} */
+
+
+.hamburger {
+  position: relative;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px;
 }
+
+.bar{
+  position: absolute;
+  height: 3px;
+  background:black;
+  width: 30px;
+}
+
+.hamburger span:nth-child(1) {
+  transform: translateY(-8px);
+}
+
+.hamburger span:nth-child(3) {
+  transform: translateY(8px);
+}
+
+/* creating the X */
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  transition: 0.3s;
+  background-color: white;
+  z-index: 2;
+  position: fixed;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(315deg);
+  transition: 0.3s;
+  background-color: white;
+  z-index: 2;
+  position: fixed;
+}
+
+.desktop-menu.active {
+  display: block;
+  background-color: #001aff9f;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  backdrop-filter: blur(8px);
+  left: 0;
+}
+
+
+
+.full-desktop-menu {
+  display: none;
+}
+
 
 /* this is the first section of the home page */
 
 .hero-container {
-  height: 70vh;
-  border: 2px solid red;
   background-image: url(images/conference5.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -118,7 +182,7 @@ a {
 }
 
 .date {
-  font-family: Gothic A1;
+  font-family: cocogoose sans-serif;
   font-size: 20px;
   font-weight: 900;
   letter-spacing: -0.08em;
@@ -126,11 +190,14 @@ a {
 }
 
 
+.logo img {
+  width: 60px;
+  height: 60px;
+}
+
 /* this is the mai program section */
 
 .program {
-  height: 100vh;
-  border: 2px solid red;
   background: #282B32; 
 }
 
@@ -270,6 +337,13 @@ text-align: left;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+
+.speaker img {
+  width: 108px;
+  height: 127px;
 }
 
 .speaker-intro {
@@ -279,7 +353,8 @@ text-align: left;
 }
 
 .buttont-cc-summit {
-  margin-top: 40px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 .buttont-cc-summit a {
@@ -304,26 +379,11 @@ text-align: left;
   display: none;
 }
 
-.speaker3,
-.speaker4,
-.speaker5,
-.speaker6{
-  display: none;
-}
-
 /* this is the about page section */
-
-/* .logo-section,
-
-.partners,
-.about-footer {
-  border: 2px solid red;
-} */
 
 .previous-summit {
   border: 5px solid #fafafa;
 }
-
 
 .frame-3
  {
@@ -346,6 +406,7 @@ text-align: left;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 .Creative h3 {
@@ -476,23 +537,79 @@ width: 60%;
 }
 
 
+/* More/Less Buttons */
+#moreButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 4.5vh;
+  gap: 0.5rem;
+  margin-bottom: 4.4vh;
+  background-color: white;
+  border: 0.12rem solid rgba(128, 128, 128, 0.199);
+  cursor: pointer;
+  align-self: center;
+}
+
+#moreButton.hidden {
+  display: none;
+}
+
+.more {
+  font-size: 0.75rem;
+}
+
+.downArrow {
+  height: 0.5rem;
+}
+
+#lessButton {
+  display: none;
+}
+
+#lessButton.hidden {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 4.5vh;
+  gap: 0.5rem;
+  margin-bottom: 4.4vh;
+  background-color: white;
+  border: 0.12rem solid rgba(128, 128, 128, 0.199);
+  cursor: pointer;
+  align-self: center;
+}
+
+.less {
+  font-size: 0.75rem;
+}
+
+.upArrow {
+  height: 0.5rem;
+  transform: rotate(180deg);
+}
+
+.hidden {
+  display: none;
+}
+
+
+
 /* Desktop styles */
 
 @media only screen and (min-width: 768px) {
 
+
+
 .hamburger,
-.less,
+
 .more {
   display: none;
 }
 
 
-.speaker3,
-.speaker4,
-.speaker5,
-.speaker6{
-  display: block;
-}
 
 .top-nav-bar {
   background: #2e2e2e;
@@ -505,7 +622,7 @@ width: 60%;
 }
 
 
-.desktop-menu {
+.full-desktop-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -665,5 +782,22 @@ text-align: left;
 .about-copywrite {
  color: #ffffff;
 }
+
+  /* Desktop Event Guests Section */
+  #moreButton {
+    display: none;
+  }
+
+  #lessButton.hidden {
+    display: none;
+  }
+
+  .speaker.hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+    margin-bottom: 7%;
+  }
 
 }
