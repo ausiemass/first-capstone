@@ -337,8 +337,8 @@ text-align: left;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  margin-right: 2rem;
-  margin-left: 1rem;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .speaker img {
