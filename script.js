@@ -51,14 +51,6 @@ const speakersData = [
 ];
 
 speakersData.forEach((card, index) => {
-  const mainDiv = document.createElement('div');
-  if(index >=2){
-    mainDiv.classList.add('speaker', 'hide-items');
-  }else 
-  {
-    mainDiv.classList.add('speaker');
-  }
-
   const cardsNormal = `<div class="speaker speaker${index + 1}" id="${index + 1}">
   <img src="${card.Image}" alt="">
   <div class="speaker-intro">
