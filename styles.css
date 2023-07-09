@@ -11,6 +11,10 @@
   display: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .buttont-cc-summit a {
   border: 1px solid #ec5242;
   color: white;
@@ -21,10 +25,6 @@
   text-align: center;
   font-size: 1.3rem;
   padding: 1rem;
-}
-
-a {
-  text-decoration: none;
 }
 
 .top-nav-bar li a {
@@ -127,21 +127,20 @@ li {
   font-weight: bold;
   font-weight: 800;
   -webkit-font-smoothing: antialiased;
- }
+}
 
 .about-hero {
   text-align: center;
-  margin: 3rem 1rem 1rem ;
+  margin: 3rem 1rem 1rem;
   color: #ec5242;
   background-image: url(images/hero-bg.png);
   background-repeat: repeat;
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
   font-weight: 800;
   -webkit-font-smoothing: antialiased;
-  }
+}
 
 .hero h1,
 .about-hero h1 {
@@ -175,7 +174,6 @@ li {
 }
 
 .date {
-  font-family: 'cocogoose' sans-serif;
   font-size: 20px;
   font-weight: 900;
   letter-spacing: -0.08em;
@@ -190,7 +188,7 @@ li {
 /* this is the mai program section */
 
 .program {
-  background: #282b32; 
+  background: #282b32;
 }
 
 /* this is the section for featured speakers */
@@ -254,7 +252,7 @@ li {
 }
 
 .program-card p {
-  color: #fff; 
+  color: #fff;
   font-size: 11px;
   font-weight: 700;
   line-height: 22px;
