@@ -11,9 +11,6 @@ document.querySelectorAll('.nav-item').forEach((n) => n.addEventListener('click'
   navmenu.classList.remove('active');
 }));
 
-
-
-
 const speakersData = [
   {
     Image: 'images/speaker_01.png',
@@ -37,34 +34,32 @@ const speakersData = [
     Image: 'images/speaker_04.png',
     Name: 'Israel Jacobs',
     position: 'Dematologist',
-    description: 'He works in the national TB hospital, He is interested in health issues' ,
+    description: 'He works in the national TB hospital, He is interested in health issues',
   },
   {
     Image: 'images/speaker_05.png',
     Name: 'Manyatsi David',
     position: 'Reverend',
-    description: ' Has pastored in 4 different churches in the past 10 years' ,
+    description: ' Has pastored in 4 different churches in the past 10 years',
   },
   {
     Image: 'images/speaker_06.png',
     Name: 'Dlamini Pauslos',
     position: 'Bishop',
-    description: ' A father of three, Married 43 years old' ,
+    description: ' A father of three, Married 43 years old',
   },
 ];
 
-
-
 speakersData.forEach((card, index) => {
-  const mainDiv = document.createElement("div");
+  const mainDiv = document.createElement('div');
   if(index >=2){
-    mainDiv.classList.add("speaker", "hide-items");
+    mainDiv.classList.add('speaker', 'hide-items');
   }else 
   {
-    mainDiv.classList.add("speaker");
+    mainDiv.classList.add('speaker');
   }
 
-  const cardsNormal = `<div class="speaker speaker${index + 1}" id="${index +1}">
+  const cardsNormal = `<div class="speaker speaker${index + 1}" id="${index + 1}">
   <img src="${card.Image}" alt="">
   <div class="speaker-intro">
     <h3 class='card-name'>${card.Name}</h3>
@@ -82,11 +77,8 @@ speakersData.forEach((card, index) => {
   if (index >= 2) {
     cardsNormalPage.classList.add('guestToHide', 'hidden');
   }
-
   works.appendChild(cardsNormalPage);
-
 });
-
 
 const moreButton = document.querySelector('#moreButton');
 const hiddenGuests = document.querySelectorAll('.guestToHide');
