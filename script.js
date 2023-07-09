@@ -25,13 +25,13 @@ const speakersData = [
     Image: 'images/speaker_02.png',
     Name: 'SohYeong Noh',
     position: 'Health Educator',
-    description: ' A lecturer in one of the local tertiary institutions. Joined FIF in 2010' ,
+    description: ' A lecturer in one of the local tertiary institutions. Joined FIF in 2010',
   },
   {
     Image: 'images/speaker_03.png',
     Name: 'Johana Masango',
     position: 'Life oriantation Coach',
-    description: ' A psychologist by proffesion, Married with 2 children, a boy and a girl' ,
+    description: ' A psychologist by proffesion, Married with 2 children, a boy and a girl',
   },
   {
     Image: 'images/speaker_04.png',
